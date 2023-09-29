@@ -1,6 +1,6 @@
 "Air Quality Data Analysis and Visualization"
 
-- Project Overview
+- Project Overview :
 This project focuses on analyzing and visualizing air quality data to provide users with a clear understanding of air quality levels categorized as "Moderate," "Good," and "Poor." The analysis is conducted at the state level, spanning the years from 2015 to 2020, with the potential for future extensions.
 
 -Objective
