@@ -47,6 +47,6 @@ Incorporating data from additional years to identify long-term trends.
 Expanding the geographical scope to include more states or countries.
 Integrating real-time data for ongoing monitoring and reporting.
 Contributors
-[Your Name]
-[Contributor 2]
-[Contributor 3]
+Rushi Shah
+Husain Mahudawala
+
