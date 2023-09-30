@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+            font-size: 28px;
+            margin: 20px 0;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+        }
+        #result {
+            font-weight: bold;
+            margin: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Analysis of Air Quality</h1>
+    <p>Select the pollutant and its quality level:</p>
+    
+    <label for="pollutant">Pollutant:</label>
+    <select id="pollutant">
+        <option value="NO2">NO2</option>
+        <option value="NOx">NOx</option>
+        <option value="SO2">SO2</option>
+        <option value="O3">O3</option>
+        <option value="CO">CO</option>
+        <option value="AQI">AQI</option>
+    </select>
+
+    <label for="Quality">Quality Level:</label>
+    <select id="Quality">
+        <option value="Moderate">Moderate</option>
+        <option value="High">High</option>
+        <option value="Low">Low</option>
+    </select>
+
+    <button onclick="analyzeAirQuality()">Analyze</button>
+
+    <div id="result"></div>
+
+    <script>
+        function analyzeAirQuality() {
+            const pollutant = document.getElementById('pollutant').value;
+            const quality = document.getElementById('Quality').value;
+
+            let airQuality = '';
+
+            // Define your air quality analysis logic based on pollutant and quality level
+            if (pollutant === 'AQI') {
+                if (quality === 'Low') {
+                    airQuality = 'Good';
+                } else if (quality === 'Moderate') {
+                    airQuality = 'Moderate';
+                } else if (quality === 'High') {
+                    airQuality = 'Poor';
+                }
+            } else {
+                // Define analysis logic for other pollutants and quality levels here
+            }
+
+            const resultElement = document.getElementById('result');
+            resultElement.textContent = `Air quality for ${pollutant} with ${quality} quality is ${airQuality}`;
+            resultElement.style.animation = 'fadeIn 1s';
+
+            setTimeout(() => {
+                resultElement.style.animation = '';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
